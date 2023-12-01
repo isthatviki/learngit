@@ -10,10 +10,10 @@ private:
 
 public:
     // 构造函数，使用传入的x和y坐标初始化成员变量
-    Point(int xCoord, int yCoord)
+    Point(int x, int y)
     {
-        x = xCoord ;
-        y = yCoord ;
+        this -> x = x ;
+        this -> y = y ;
     }
 
     // 显示点的坐标
@@ -39,10 +39,10 @@ private:
 
 public:
     // 构造函数，使用传入的点坐标、长度和宽度初始化成员变量
-    Rectangle( int xCoord , int yCoord , int rectLength , int rectWidth ) : Point( xCoord , yCoord )
+    Rectangle( int x , int y , int length , int width ) : Point( x , y )
     {
-        length = rectLength ;
-        width = rectWidth ;
+        this -> length = length ;
+        this -> width = width ;
     }
 
     // 成员函数，计算矩形的面积
@@ -76,7 +76,7 @@ int main()
     cin >> newX;
     cout << "请输入更改后的y坐标：" ;
     cin >> newY ;
-    point.changePoint(newX, newY) ;
+    point.changePoint( newX , newY ) ;
     point.displayPoint() ;
 
     // 创建Rectangle对象并计算面积和周长
