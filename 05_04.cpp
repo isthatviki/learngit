@@ -28,6 +28,7 @@ public:
         cout << "姓名: " << stuName << endl ;
         cout << "班级: " << className << endl ;
         cout << "学号: " << stuID << endl ;
+        cout << "分数：" << stuScore << endl ;
 
     }
 
