@@ -1,0 +1,29 @@
+cmake_minimum_required(VERSION 3.28.0)
+
+project(07_homework)
+
+# 设置C++标准
+set(CMAKE_CXX_STANDARD 11)
+
+# 查找OpenCV包
+find_package(OpenCV 4.8.1_5 REQUIRED)
+
+# 包含OpenCV的头文件路径
+include_directories("/opt/homebrew/Cellar/opencv/4.8.1_5/include")
+
+# 链接OpenCV库
+link_directories("/opt/homebrew/Cellar/opencv/4.8.1_5/lib")
+
+# 添加可执行文件
+add_executable(07_01 07_01.cpp)
+add_executable(07_02 07_02.cpp)
+add_executable(07_03 07_03.cpp)
+add_executable(07_04 07_04.cpp)
+
+# 链接OpenCV库
+target_link_libraries(07_01 ${OpenCV_LIBS})
+target_link_libraries(07_02 ${OpenCV_LIBS})
+target_link_libraries(07_03 ${OpenCV_LIBS})
+target_link_libraries(07_04 ${OpenCV_LIBS})
+
+

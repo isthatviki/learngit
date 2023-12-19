@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${workspaceFolder}/a.out",
+                "-I",
+                "/Users/weijiayi/Desktop/opencv/include",
+                "-L",
+                "/Users/weijiayi/Desktop/opencv/lib",
+                "-lopencv_core",
+                "-lopencv_highgui",
+                "-lopencv_imgcodecs",
+                "-lopencv_videoio"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
